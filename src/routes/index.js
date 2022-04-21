@@ -7,6 +7,7 @@ const { addUsers, getUsers, getUser, updateUser, deleteUser } = require('../cont
 const { getProduct, addProduct } = require('../controllers/product')
 const { getTransactions, addTransaction } = require('../controllers/transaction')
 const { register, login } = require('../controllers/auth')
+const { auth } = require('../middlewares/auth')
 
 // Middleware
 // import middleware here
@@ -21,7 +22,7 @@ router.delete('/user/:id', deleteUser)
 router.get('/products', getProduct)
 router.post('/product', addProduct) // place middleware before controller
 
-router.get('/transactions', getTransactions)
+router.get('/transactions', auth, getTransactions)
 router.post('/transaction', addTransaction) // place middleware before controller
 
 router.post('/register', register)

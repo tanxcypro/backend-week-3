@@ -44,7 +44,7 @@ exports.getProduct = async (req, res) => {
 
 exports.addProduct = async (req, res) => {
   try {
-    const { category: categoryName, ...data } = req.body;
+    const { category: categoryName, ...data} = req.body;
     const newProduct = await product.create(data);
     const categoryData = await category.findOne({
       where: {
