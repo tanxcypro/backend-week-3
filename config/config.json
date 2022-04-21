@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "course-express-b33",
+    "database": "course-express",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
