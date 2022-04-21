@@ -41,8 +41,7 @@ exports.register = async (req, res) => {
     });
 
     // code here
-    const SECRET_KEY = 'bebas apa aja'
-    const token = jwt.sign({id: newUser.id}, SECRET_KEY)
+    const token = jwt.sign({id: newUser.id}, process.env.SECRET_KEY)
 
     res.status(200).send({
       status: "success...",
@@ -101,8 +100,7 @@ exports.login = async (req, res) => {
     }
 
     // code here
-    const SECRET_KEY = 'bebas apa aja'
-    const token = jwt.sign({id: userExist.id}, SECRET_KEY)
+    const token = jwt.sign({id: userExist.id}, process.env.SECRET_KEY)
 
     res.status(200).send({
       status: "success...",
