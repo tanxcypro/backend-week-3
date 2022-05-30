@@ -2,9 +2,9 @@ const Sequelize = require('sequelize')
 const db = {}
 const sequelize = new Sequelize('course-express',
     'root',
-    'root', {
+    '', {
     host: 'localhost',
-    port: '8889',
+   
     dialect: 'mysql',
     logging: console.log,
     freezeTableName: true,
