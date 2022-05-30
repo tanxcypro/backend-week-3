@@ -16,7 +16,7 @@ const {
   addTransaction,
 } = require("../controllers/transaction");
 // import controller here
-
+const {register,login}=require("../controllers/auth")
 // Route
 router.post("/user", addUsers);
 router.get("/users", getUsers);
@@ -31,5 +31,6 @@ router.get("/transactions", getTransactions);
 router.post("/transaction", addTransaction);
 
 // add route here
-
+router.post("/register", register);
+router.post("/login", login);
 module.exports = router;
